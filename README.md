@@ -8,11 +8,11 @@ Info:
  * 10 seats per table
  * 90 people preregister
  * 10 people manually
- * 
+   
  * Sort by company + iterate through this way
- * 
+   
  * Table could be collection type?
- * 
+   
  * Name
  * Company
  * Table Number
