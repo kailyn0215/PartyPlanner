@@ -3,7 +3,6 @@ PLANNING A PARTY!
 
 Info:
 
-/*
  * Attendee Info: 1 company rep per table - if more than 10 people from a company tell the user
  * 10 tables
  * 10 seats per table
@@ -19,4 +18,3 @@ Info:
  * Table Number
  * Seat Number
  * Role/Title
-*/
