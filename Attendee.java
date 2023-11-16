@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Attendee
 {
 	private int id;
@@ -33,6 +35,10 @@ public class Attendee
 	
 	public String split(String person)
 	{
-		
+		String[] splitPerson = person.split(",", 5);
+		id = Integer.parseInt(splitPerson[1]);
+		name = splitPerson[3] + " " + splitPerson[2];
+		company = splitPerson[4];
+		return name;
 	}
 }
