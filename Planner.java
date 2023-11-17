@@ -8,14 +8,31 @@ public class Planner
 	public static void main(String args[])
 	{
 		ArrayList<Attendee> guests = new ArrayList<Attendee>();
+		ArrayList<Attendee> tables = new ArrayList<Attendee>();
+		
+		int id;
+		String name;
+		String company;
+		int x = 0;
+		
 		try 
 		{
 			File people = new File("partyguests.txt");
 			Scanner myReader = new Scanner(people);
 			while (myReader.hasNextLine()) 
 			{
-				String person = myReader.nextLine();
-				//guests.add(myReader.nextLine());
+				//String person = myReader.nextLine();
+				String arr[] = myReader.nextLine().split(",");
+				
+				//uniqueid, last, first, compID
+				id = Integer.parseInt(arr[0]);
+				name = arr[2] + " " + arr[1];
+				company = arr[3];						
+				Attendee person = new Attendee(id, name, company);
+				guests.add(new Attendee(id, name, company));
+				System.out.print(guests.get(x));
+				x++;
+				//guests.add(person.split());
 			}
 			myReader.close();
 		}
