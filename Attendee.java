@@ -14,7 +14,7 @@ public class Attendee
 	{
 		id = initId;
 		name = initName;
-		company = initCompany;
+		company = initCompany;			
 	}
 	
 	/*public Attendee(String people)
@@ -53,6 +53,7 @@ public class Attendee
 		}
 		return "ERROR";
 	}
+	
 	
 	/*public void split()
 	{
