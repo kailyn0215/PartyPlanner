@@ -1,7 +1,5 @@
 # PartyPlanner
 
-(now working in vscode bc at least on my home computer geany refuses to save files)
-
 PLANNING A PARTY!
 
 Info:
