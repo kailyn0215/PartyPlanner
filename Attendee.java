@@ -14,7 +14,13 @@ public class Attendee
 	private int companyNumber;
 	private int tableNumber;
 	private int seatNumber;
-	
+	/**
+ 	* @param initId 	id number
+  	* @param initFName	the guests first name
+   	* @param initLName	the guests last name
+    	* @param initCompany	the name of the company
+     	* @param initCompNumb 	the number of the company (easy access)
+	*/
 	public Attendee(int initId, String initFName, String initLName, String initCompany, int initCompNumb)
 	{
 		id = initId;
@@ -23,42 +29,59 @@ public class Attendee
 		companyName = initCompany;	
 		companyNumber = initCompNumb;		
 	}
-	
+	/**
+ 	* @return 		returns string for the guest
+	*/ 
 	public String toString()
 	{
 		return ("\n\nID: " + id + ", Name: " + firstName + " " + lastName + ", Company: " + companyName + "\n");
 	}
-	
+	/**
+ 	* @return 		returns int for id
+	*/ 
 	public int getId()
 	{
 		return id;
 	}
-	
+	/**
+ 	* @return 		returns string for the guest name
+	*/ 
 	public String getName()
 	{
 		return firstName + " " + lastName;
 	}
-	
+	/**
+ 	* @return 		returns int for the compnumber
+	*/ 
 	public int getCompanyNumber()
 	{
 		return companyNumber;
 	}
-	
+	/**
+ 	* @return 		returns string for the compname
+	*/ 
 	public String getCompanyName()
 	{
 		return companyName;
 	}
-	
+	/**
+ 	* sets int for the table number
+  	* @return 		no return value
+	*/ 
 	public void setTable(int num)
 	{
 		tableNumber = num;
 	}
-	
+	/**
+ 	* @return 		returns int for the table #
+	*/ 
 	public int getTable()
 	{
 		return tableNumber;
 	}
-
+	/**
+ 	* @return 		returns int for the seat #
+	*/ 
 	public int getSeat(ArrayList<Attendee>[] tables, int maxTables)
 	{
 		for(int i = 0; i < maxTables; i++)
