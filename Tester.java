@@ -113,7 +113,7 @@ public class Tester
 			
 			if (input == 1)
 			{			
-				fun.addGuest(guests, x, comps);
+				fun.addGuest(unassigned, guests, x, comps);
 			}
 			else if (input == 2)
 			{
@@ -125,7 +125,11 @@ public class Tester
 			}
 			else if (input == 4)
 			{
-				
+				fun.searchGuest(guests);
+			}
+			else
+			{
+				break;
 			}
 		}
 	}

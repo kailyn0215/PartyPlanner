@@ -7,8 +7,8 @@ public class Attendee
 	private String lastName;
 	private String companyName;
 	private int companyNumber;
-	private String person;
 	private int tableNumber;
+	private int seatNumber;
 	
 	public Attendee(int initId, String initFName, String initLName, String initCompany, int initCompNumb)
 	{
@@ -52,5 +52,10 @@ public class Attendee
 	public int getTable()
 	{
 		return tableNumber;
+	}
+
+	public int getSeat()
+	{
+		return seatNumber;
 	}
 }
