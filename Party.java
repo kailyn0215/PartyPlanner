@@ -11,7 +11,7 @@ public class Party
 	private int maxPpl;
 	private int maxTables;
 	private int perTable;
-
+	
 	public Party(int initMaxPpl, int initMaxTables)
 	{
 		maxPpl = initMaxPpl;
@@ -19,21 +19,21 @@ public class Party
 		perTable = maxPpl/maxTables;
 	}
 	/*
- 	* Returns the maximum number of people that can go to the party.
+ 	* @return		the maximum number of people that can go to the party.
 	*/
 	public int getMaxPpl()
 	{
 		return maxPpl;
 	}
 	/*
- 	* Returns the maximum number of tables that are at the party.
+ 	* @return		the maximum number of tables that are at the party.
 	*/
 	public int getMaxTables()
 	{
 		return maxTables;
 	}
 	/*
- 	* Returns the maximum number of people per table, based off of maxppl and maxtables.
+ 	* @return		the maximum number of people per table, based off of maxppl and maxtables.
 	*/
 	public int getPerTable()
 	{
@@ -43,8 +43,8 @@ public class Party
  	* Assigns tables to each of the guests
   	*
    	* @param unassigned	arraylist of attendees who are not yet assigned to tables
-    * @param tables		the array of arraylists of tables
-    * @return 		no return value
+   	* @param tables		the array of arraylists of tables
+    	* @return 		no return value
 	*/
 	public void assignTables(ArrayList<Attendee> unassigned, ArrayList<Attendee>[] tables)
 	{	
@@ -88,7 +88,7 @@ public class Party
  	* Checks the tables to see if an attendee is eligible to sit there
   	*
    	* @param tables 	arraylist of a certain table
-    * @param num		int that holds the value of the attendees company
+    	* @param num		int that holds the value of the attendees company
  	* @param i		int that holds which table the attendee is being placed at
    	* @return 		boolean representation of if the attendee can be sat at the current table
 	*/
@@ -111,9 +111,9 @@ public class Party
  	* Adds the guest the the list of guests (doesnt fully work yet, needs to be added to the arraylist + added to a table)
   	*
    	* @param unassigned	arraylist of attendees, to add new guest to
-    * @param x 			int value representing the id of the new guest
+   	* @param x 		int value representing the id of the new guest
  	* @param comps		arraylist of companies to assign a company name to the guest
-	* @return 			no return value
+	* @return 		no return value
 	*/
 	public void addGuest(ArrayList<Attendee> unassigned, ArrayList<Attendee> guests, int x, ArrayList<String> comps)
 	{
@@ -138,7 +138,7 @@ public class Party
  	* Prints the tables from 1 - the max amount of tables
   	*
    	* @param tables 	array of arraylist of tables, used to access the different tables + print them
-    * @return 		no return value
+    	* @return 		no return value
 	*/
 	public void printTable(ArrayList<Attendee>[] tables)
 	{
@@ -152,7 +152,8 @@ public class Party
  	* Prints the list of attendees by company
   	*
    	* @param guests 	arraylist of all of the guests to print
-    * @param comps		arraylist of the names of all of the companies to arrange the guests in order
+    	* @param comps		arraylist of the names of all of the companies to arrange the guests in order
+     	* @return 		no return value
 	*/
 	public void printCompany(ArrayList<Attendee> guests, ArrayList<String> comps)
 	{
@@ -175,7 +176,13 @@ public class Party
 			}
 		}
 	}
-
+	/**
+ 	* searches for the users input from the arraylist guests
+  	*
+   	* @param guests		arraylist of all of the guests to search through
+    	* @param tables		array of arraylist of the tables that the guests are sat at
+     	* @return 		no return value
+	*/
 	public void searchGuest(ArrayList<Attendee> guests, ArrayList<Attendee>[] tables)
 	{
 		Scanner n = new Scanner(System.in);
