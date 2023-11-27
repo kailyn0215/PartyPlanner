@@ -1,5 +1,10 @@
 import java.util.*;
-
+/**
+* Attendee class - takes id, fname, lname, company, and company #
+* lets guests be printed + gives access to their id, name, company, table, and seat
+* @author kailyn0215
+* @date 11/27/2023
+*/
 public class Attendee
 {
 	private int id;
