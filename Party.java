@@ -3,6 +3,8 @@ import java.util.*;
 * Party file!! holds max people, tables, and people per table.
 * Also assigns, checks, and prints tables
 * Allows user to search + add guests to the list
+* @author kailyn0215
+* @date 11/27/2023
 */
 public class Party
 {
