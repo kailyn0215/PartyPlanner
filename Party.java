@@ -41,7 +41,12 @@ public class Party
     * @return 		no return value
 	*/
 	public void assignTables(ArrayList<Attendee> unassigned, ArrayList<Attendee>[] tables)
-	{
+	{	
+		for(int j = 0; j < maxTables; j++)
+		{
+			tables[j].clear();
+		}
+		
 		/*Iterator<Attendee> iterator = unassigned.iterator();
 		while(iterator.hasNext())
 		{
@@ -64,7 +69,7 @@ public class Party
 			{
 				if(checkTables(tables[i], x.getCompanyNumber(), i))
 				{
-					System.out.print(i);
+					//System.out.print(i);
 					tables[i].add(x);
 					//unassigned.remove(x); couldnt figure this out :(
 					x.setTable(i + 1);				
@@ -110,7 +115,6 @@ public class Party
 		System.out.print("Please enter the name of the person who you would like to add: ");
 		String arr[] = add.nextLine().split(" ");
 		
-		
 		String fName = arr[0];
 		String lName = arr[1];
 		int id = x++;
@@ -118,6 +122,7 @@ public class Party
 		System.out.print("Please enter the company number of the person who you would like to add: ");
 
 		int companyNumber = add.nextInt();
+		companyNumber--;
 		String compName = comps.get(companyNumber); 
 		
 		unassigned.add(new Attendee(id, fName, lName, compName, companyNumber));
@@ -165,7 +170,7 @@ public class Party
 		}
 	}
 
-	public void searchGuest(ArrayList<Attendee> guests)
+	public void searchGuest(ArrayList<Attendee> guests, ArrayList<Attendee>[] tables)
 	{
 		Scanner n = new Scanner(System.in);
 		System.out.print("Please enter the full name of the person you wish to search for: ");
@@ -182,6 +187,7 @@ public class Party
 				else
 				{
 					System.out.println("Table: " + x.getTable() + "\n");
+					// + ", Chair: " + x.getSeat(tables)); havent gotten the chair yet :(
 				}
 			}
 		}
