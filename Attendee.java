@@ -54,8 +54,16 @@ public class Attendee
 		return tableNumber;
 	}
 
-	public int getSeat()
+	public int getSeat(ArrayList<Attendee>[] tables, int maxTables)
 	{
+		for(int i = 0; i < maxTables; i++)
+		{
+			int j = tables[i].indexOf(id);
+			if(j > -1)
+			{
+				return i + 1;
+			}
+		}
 		return seatNumber;
 	}
 }
