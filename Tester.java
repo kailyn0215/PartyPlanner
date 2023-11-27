@@ -1,7 +1,16 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-
+/**
+* Tester file for PartyPlanner
+* Takes both 'companies.txt' and 'partyguests.txt'
+* and splits them into substrings to use them in the code
+*
+* uses a while true loop to allow the user to use the five different functions:
+* 1 - Add Guests, 2 - Print by table, 3 - Print by company, 4 - Search for guest, 5 - Quit
+*
+* @author kailyn0215
+*/
 public class Tester
 {
 	private int[] compCount = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
