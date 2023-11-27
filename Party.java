@@ -1,5 +1,9 @@
 import java.util.*;
-
+/**
+* Party file!! holds max people, tables, and people per table.
+* Also assigns, checks, and prints tables
+* Allows user to search + add guests to the list
+*/
 public class Party
 {
 	private int maxPpl;
