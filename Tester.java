@@ -18,6 +18,8 @@ public class Tester
 	// driver class
 	public static void main(String args[])
 	{
+		System.out.print("Welcome to Party Planner! To get started, please load the files 'companies.txt' and 'partyguests.txt' if you haven't already.");
+		
 		ArrayList<Attendee> guests = new ArrayList<Attendee>();
 		ArrayList<String> comps = new ArrayList<String>();
 		ArrayList<Attendee> unassigned = new ArrayList<Attendee>();
@@ -37,7 +39,7 @@ public class Tester
 		{
 			File companies = new File("companies.txt");
 			Scanner getCompanies = new Scanner(companies);
-			System.out.print("Companies:\n\n");
+			//System.out.print("Companies:\n\n");
 			while (getCompanies.hasNextLine()) 
 			{
 				String arr2[] = getCompanies.nextLine().split(",");
@@ -45,7 +47,7 @@ public class Tester
 				{										
 					String cn = arr2[1];
 					comps.add(cn);
-					System.out.println("#" + (y + 1) + ": " + comps.get(y));
+					//System.out.println("#" + (y + 1) + ": " + comps.get(y));
 					y++;				
 				}
 			}
@@ -53,7 +55,7 @@ public class Tester
 		}
 		catch (FileNotFoundException e) 
 		{
-			System.out.println("An error occurred.");
+			System.out.println("\n\n'companies.txt' NOT FOUND. Please load 'companies.txt' into the folder with the rest of these files to continue.");
 			e.printStackTrace();
 		}
 		
@@ -61,7 +63,7 @@ public class Tester
 		{
 			File people = new File("partyguests.txt");
 			Scanner getPeople = new Scanner(people);
-			System.out.print("Guests:\n\n");
+			//System.out.print("Guests:\n\n");
 			while (getPeople.hasNextLine()) 
 			{
 				String arr[] = getPeople.nextLine().split(",");
@@ -71,14 +73,14 @@ public class Tester
 				company = arr[3];
 				companyName = comps.get(Integer.parseInt(company));						
 				guests.add(new Attendee(id, firstName, lastName, companyName, Integer.parseInt(company)));
-				System.out.print(guests.get(x));
+				//System.out.print(guests.get(x));
 				x++;
 			}
 			getPeople.close();
 		}
 		catch (FileNotFoundException e) 
 		{
-			System.out.println("An error occurred.");
+			System.out.println("\n\n'partyguests.txt' NOT FOUND. Please load 'partyguests.txt' into the folder with the rest of these files to continue.");
 			e.printStackTrace();
 		}
 		
@@ -99,6 +101,8 @@ public class Tester
 			
 		fun.assignTables(unassigned, tables);
 		
+		//unassigned.clear();
+		
 		while(true)
 		{
 			Scanner scan = new Scanner(System.in);
@@ -112,8 +116,9 @@ public class Tester
 			catch (InputMismatchException e) {}
 			
 			if (input == 1)
-			{			
+			{		
 				fun.addGuest(unassigned, guests, x, comps);
+				fun.assignTables(unassigned, tables);
 			}
 			else if (input == 2)
 			{
