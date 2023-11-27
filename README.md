@@ -1,21 +1,6 @@
 # PartyPlanner
 
 PLANNING A PARTY!
-
-Info:
-
- * Attendee Info: 1 company rep per table - if more than 10 people from a company tell the user
- * 10 tables
- * 10 seats per table
- * 90 people preregister
- * 10 people manually
-   
- * Sort by company + iterate through this way
-   
- * Table could be collection type?
-   
- * Name
- * Company
- * Table Number
- * Seat Number
- * Role/Title
+The goal is to take a file with ~90 people with the ability to add more people and arrange them into 10 tables.
+Each person had a company ID and only one of each company rep per table.
+The program allows the user to add guests, print list by company, print list by table, and search for a specific guest
